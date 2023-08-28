@@ -1,14 +1,14 @@
 {
-  "posts": [
+  "products": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "product1",
+      "stock": 22
     },
     {
       "id": 2,
-      "title": "1234-server",
-      "author": "typicode"
+      "name": "product2",
+      "stock": 63
     }
   ],
   "comments": [
