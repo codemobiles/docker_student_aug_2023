@@ -10,3 +10,4 @@ services:
       NODE_ENV: production
     ports:
       - 4000:3000
+
