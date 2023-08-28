@@ -1,3 +1,1 @@
-$ docker compose up
-$ docker compose up -d
-$ docker compose down
+$ docker compose -f docker-compose-demo4.yml up   
