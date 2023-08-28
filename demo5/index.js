@@ -20,8 +20,9 @@ app.get("/register", (req, res) => {
 
 app.listen(process.env.PORT || 3000, () => {
   console.log(
-    `Servier is running port ${process.env.PORT} on ${
-      process.env.NODE_ENV || "develop"
-    }`
+    `Servier is running port ${process.env.PORT} 
+    on ${process.env.NODE_ENV || "develop"}
+    with ${process.env.TOKEN || "unknow"}
+    `
   );
 });
