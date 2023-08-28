@@ -12,3 +12,5 @@ $ docker logs --follow nodeapp
 $ docker exec -it nodeapp sh
 $ docker stop/start nodeapp
 
+# build image
+$ docker build -t nodeapp:1.0 .
