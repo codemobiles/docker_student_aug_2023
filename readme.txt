@@ -3,9 +3,9 @@ Welcome to core docker for developers workshop
 - vscode extension: sqltool
 
 # Unix commands
-- ls -lrt
+$ ls -lrt
 
 # basic docker commands
-- docker ps
-- docker run <docker-image>
-- docker start/stop <container>
+$ docker ps
+$ docker run <docker-image>
+$ docker start/stop <container>
