@@ -8,8 +8,7 @@ services:
       dockerfile: ./Dockerfile
     environment:
       NODE_ENV: production
-      USERNAME: root
-      PASSWORD: 5555
+      TOKEN: ${TOKEN}
     ports:
       - 4000:5000
 
