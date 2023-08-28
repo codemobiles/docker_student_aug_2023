@@ -5,3 +5,4 @@ Welcome to core docker for developers workshop
 # basic docker commands
 - docker ps
 - docker run <docker-image>
+- docker start/stop <container>
