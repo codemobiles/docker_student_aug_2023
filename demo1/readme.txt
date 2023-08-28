@@ -14,3 +14,5 @@ $ docker stop/start nodeapp
 
 # build image
 $ docker build -t nodeapp:1.0 .
+$ docker images
+$ docker run -d --rm --name app nodeapp:1.0
