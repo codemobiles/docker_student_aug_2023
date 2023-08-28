@@ -7,6 +7,9 @@ $ ls -lrt
 
 # basic docker commands
 $ docker ps
+$ docker ps -a
 $ docker run <docker-image>
 $ docker start/stop <container-name>
 $ docker start/stop <container-id (partail or full)>
+$ docker rm <container-name> or <container-id (partail or full)>
+$ docker rm -f <container-name> or <container-id (partail or full)>
