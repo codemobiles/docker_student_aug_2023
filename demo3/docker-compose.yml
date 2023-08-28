@@ -1,12 +1,12 @@
 version: '3.4'
 
 services:
-  nodeserver:
-    image: nodeserver
+  backend:
+    image: demo3
     build:
-      context: demo3
+      context: .
       dockerfile: ./Dockerfile
     environment:
       NODE_ENV: production
     ports:
-      - 3000:3000
+      - 4000:3000
