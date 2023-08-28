@@ -8,4 +8,5 @@ $ ls -lrt
 # basic docker commands
 $ docker ps
 $ docker run <docker-image>
-$ docker start/stop <container>
+$ docker start/stop <container-name>
+$ docker start/stop <container-id (partail or full)>
