@@ -6,3 +6,4 @@ $ docker run --rm  --name nodeapp node node --version
 $ docker run --rm  --name nodeapp -v ./:/app node node /app/index.js   // case of unix
 $ docker run --rm  --name nodeapp -v $(pwd):/app node node /app/index.js // case of unix
 $ docker run --rm  --name nodeapp -v %cd%:/app node node /app/index.js // case of window
+$ docker run -d --rm  --name nodeapp -v %cd%:/app node node /app/index.js // case of window
