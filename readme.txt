@@ -16,3 +16,4 @@ $ docker rm -f <container-name> or <container-id (partail or full)>
 $ docker images
 $ docker rmi <image-id>
 $ docker pull <image-name:tag>
+$ docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container ID>
