@@ -14,3 +14,4 @@ $ docker start/stop <container-id (partail or full)>
 $ docker rm <container-name> or <container-id (partail or full)>
 $ docker rm -f <container-name> or <container-id (partail or full)>
 $ docker images
+$ docker rmi <image-id>
