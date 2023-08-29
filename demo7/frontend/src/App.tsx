@@ -1,13 +1,21 @@
-import React from "react";
+import { useEffect, useState } from "react";
 
-type Props = {};
+export default function App() {
+  const [dataArray, setdataArray] = useState([]);
+  useEffect(() => {
+    loadData();
+  });
 
-export default function App({}: Props) {
+  const loadData = async () => {
+    const response = await fetch("http://localhost:8080");
+    setdataArray(await response.json());
+  };
+
   return (
     <div>
       <ul>
-        {["angular", "react", "vue"].map((e: string) => (
-          <li key={e}>{e}</li>
+        {dataArray.map((e: { _id: string; name: string }) => (
+          <li key={e._id}>{e.name}</li>
         ))}
       </ul>
     </div>
