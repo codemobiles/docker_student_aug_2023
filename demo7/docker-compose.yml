@@ -7,3 +7,15 @@ services:
     volumes:
       - ./data:/data
     restart: always
+  backend:
+    image: backend
+    build: ./backend       
+    ports:
+      - "8080:8080"
+    environment:
+      - MONGO_URL=mongodb://database/react-app  
+    restart: always
+    depends_on:
+      - database
+    
+    
