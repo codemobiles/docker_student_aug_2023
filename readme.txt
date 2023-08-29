@@ -18,3 +18,4 @@ $ docker rmi <image-id>
 $ docker pull <image-name:tag>
 $ docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container ID>
 $ docker logs --follow <contain-name>
+$ docker exec -it <contain-name> sh
