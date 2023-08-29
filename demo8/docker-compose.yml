@@ -22,21 +22,21 @@ services:
       PMA_ARBITRARY: 1
     depends_on:
       - database
-  # backend:
-  #   image: backend
-  #   build: ./backend       
-  #   ports:
-  #     - "8080:8080"
-  #   environment:
-  #     - MONGO_URL=mongodb://database/react-app  
-  #   restart: always
-  #   depends_on:
-  #     - database
-  # frontend:
-  #   image: frontend
-  #   build: ./frontend
-  #   ports:
-  #     - "85:80"
-  #   restart: always
-  #   depends_on:
-  #     - backend
+  backend:
+    image: backend
+    build: ./backend       
+    ports:
+      - "8080:8080"
+    environment:
+      - MONGO_URL=mongodb://database/react-app  
+    restart: always
+    depends_on:
+      - database
+  frontend:
+    image: frontend
+    build: ./frontend
+    ports:
+      - "85:80"
+    restart: always
+    depends_on:
+      - backend

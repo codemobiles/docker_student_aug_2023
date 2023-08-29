@@ -47,16 +47,32 @@ app.get("/add/:name", async (req, res) => {
   });
 });
 
-app.get("/clear", async (req, res) => {});
+app.get("/clear", async (req, res) => {
+  // Execute a SQL query
+  const query = "DELETE FROM products";
+  connection.query(query, (error, results, fields) => {
+    if (error) {
+      console.error("Error:", error);
+      res.json({ result: "nok" });
+    } else {
+      console.log("Results:", results);
+      res.json({ result: "ok" });
+    }
+  });
+});
 
 // Create a connection to the database
-const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "my-secret-pW7770",
-  database: "test",
-});
+const config = {
+  host: process.env.db_server || "localhost",
+  user: process.env.db_user || "root",
+  password: process.env.db_password || "my-secret-pW7770",
+  database: process.env.db_name || "test",
+};
+console.log("config: \n" + JSON.stringify(config));
+const connection = mysql.createConnection(config);
 
 // Establish the connection
 connection.connect();
-app.listen(8080, () => console.log(`Example app listening`));
+app.listen(process.env.server_port || 8080, () =>
+  console.log(`Example app listening on ${process.env.server_port || 8080}`)
+);
