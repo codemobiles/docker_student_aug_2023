@@ -9,11 +9,12 @@ $ ls -lrt
 $ docker ps
 $ docker ps -a
 $ docker run <docker-image>
-$ docker start/stop <container-name>
-$ docker start/stop <container-id (partail or full)>
+$ docker start/stop/restart <container-name>
+$ docker start/stop/restart <container-id (partail or full)>
 $ docker rm <container-name> or <container-id (partail or full)>
 $ docker rm -f <container-name> or <container-id (partail or full)>
 $ docker images
 $ docker rmi <image-id>
 $ docker pull <image-name:tag>
 $ docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container ID>
+$ docker logs --follow <contain-name>
