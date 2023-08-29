@@ -1,8 +1,8 @@
-return module.exports = config = {
+return (module.exports = config =
+  {
     mongo: {
-        uri: process.env.MONGO_URL ||
-        'mongodb://127.0.0.1/mean-app',
-        options: []
+      uri: process.env.MONGO_URL || "mongodb://127.0.0.1:27018/react-app",
+      options: [],
     },
-    port: process.env.port || '8080'
-};
+    port: process.env.port || "8080",
+  });
