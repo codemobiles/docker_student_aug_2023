@@ -23,6 +23,12 @@ export default function App() {
         placeholder="Enter your data"
         value={newData}
         onChange={(event) => setNewData(event.target.value)}
+        onKeyPress={(event) => {
+          if (event.key == "Enter") {
+            addData(newData);
+            setNewData("");
+          }
+        }}
       />
       <button
         onClick={() => {
@@ -30,7 +36,7 @@ export default function App() {
           setNewData("");
         }}
       >
-        Add
+        Create
       </button>
       <ul>
         {dataArray.map((e: { _id: string; name: string }) => (
