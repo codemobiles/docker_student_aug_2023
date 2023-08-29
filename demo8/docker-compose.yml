@@ -27,13 +27,12 @@ services:
     build: ./backend       
     ports:
       - "8080:8080"
-    environment:
-      # db_server=database
-      # db_user=root
-      # db_password=my-secret-pW7770
-      # db_name=test
-      # server_port=8080
-      - MONGO_URL=mongodb://database/react-app  
+    environment:      
+      - db_server=${db_server}
+      - db_user=${db_user}
+      - db_password=${db_password}
+      - db_name=${db_name}
+      - server_port=${server_port}
     restart: always
     depends_on:
       - database
