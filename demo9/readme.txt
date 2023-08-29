@@ -53,3 +53,7 @@ On other machines, you can pull images from your insecure registry:
 ```sh
 docker pull 127.0.0.1:5000/my-image:tag
 ```
+
+
+- curl -X GET 127.0.0.1:6000/v2/_catalog
+- curl -X GET 127.0.0.1:6000/v2/<repository>/tags/list
