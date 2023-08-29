@@ -1,6 +1,6 @@
 version: '3.4'
 services:
-  ----r:
+  jsonserver:
     image: vimagick/json-server
     command: -H 0.0.0.0 -p 3000 -w db.json
     ports:
